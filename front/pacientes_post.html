@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Registro de Paciente</title>
+</head>
+
+<body>
+    <h1>REGISTRO DE PACIENTE</h1>
+    <a href="index.html">Volver al inicio</a> | <a href="pacientes_get.html">Volver a la lista</a><br><br>
+
+    <form name="FormularioData">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required><br><br>
+
+        <label for="apellido">Apellido:</label>
+        <input type="text" id="apellido" name="apellido" required><br><br>
+
+        <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
+        <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required><br><br>
+
+        <label for="genero">Género:</label>
+        <select id="genero" name="genero" required>
+            <option value="Masculino">Masculino</option>
+            <option value="Femenino">Femenino</option>
+            <option value="Otro">Otro</option>
+        </select><br><br>
+
+        <label for="telefono">Teléfono:</label>
+        <input type="text" id="telefono" name="telefono"><br><br>
+
+        <label for="direccion">Dirección:</label>
+        <input type="text" id="direccion" name="direccion"><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"><br><br>
+
+        <label for="seguro_medico">Seguro Médico:</label>
+        <input type="text" id="seguro_medico" name="seguro_medico"><br><br>
+
+        <button type="submit" id="btnguardar">Guardar</button>
+        <button type="reset">Cancelar</button>
+    </form>
+    <script src="pacientes_post.js"></script>
+</body>
+
+</html>

@@ -2,10 +2,10 @@ from fastapi import FastAPI
 from psycopg_pool import AsyncConnectionPool
 from psycopg.rows import dict_row
 from contextlib import asynccontextmanager
+from config.configuracion import config
 
-# DB_URL = "postgresql://usuario:password@host:puerto/nameBD"
-# Actualización de la URL de conexión para reflejar las nuevas tablas
-DB_URL = "postgresql://postgres:dantex@localhost:5432/proyecto_final?options=-csearch_path%3Dpublic" 
+DB_URL = f"postgresql://{config.DB_USER}:{config.DB_PASSWORD}@{config.DB_HOST}:{config.DB_PORT}/{config.DB_NAME}?options=-csearch_path%3Dpublic"
+
 # 1. Gestionamos el ciclo de vida del Pool
 @asynccontextmanager
 async def lifespan(app: FastAPI):
@@ -16,8 +16,8 @@ async def lifespan(app: FastAPI):
         print("✅ Pool de conexiones abierto exitosamente")
         yield
     finally:
-        # Esto asegura que se cierre el pool al apagar la app, incluso  si la app falla al arrancar
-        await app.async_pool.close() 
+        # Esto asegura que se cierre el pool al apagar la app, incluso si la app falla al arrancar
+        await app.async_pool.close()
         print("🛑 Pool de conexiones cerrado")
 
 app = FastAPI(lifespan=lifespan)

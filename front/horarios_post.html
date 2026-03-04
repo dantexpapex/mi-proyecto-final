@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Registro de Horario</title>
+</head>
+
+<body>
+    <h1>REGISTRO DE HORARIO</h1>
+    <a href="index.html">Volver al inicio</a> | <a href="horarios_get.html">Volver a la lista</a><br><br>
+
+    <form name="FormularioData">
+        <label for="id_medico">ID Médico:</label>
+        <input type="number" id="id_medico" name="id_medico" required><br><br>
+
+        <label for="dia_semana">Día de la Semana:</label>
+        <select id="dia_semana" name="dia_semana" required>
+            <option value="Lunes">Lunes</option>
+            <option value="Martes">Martes</option>
+            <option value="Miercoles">Miércoles</option>
+            <option value="Jueves">Jueves</option>
+            <option value="Viernes">Viernes</option>
+            <option value="Sabado">Sábado</option>
+            <option value="Domingo">Domingo</option>
+        </select><br><br>
+
+        <label for="hora_inicio">Hora Inicio (HH:MM):</label>
+        <input type="time" id="hora_inicio" name="hora_inicio" required><br><br>
+
+        <label for="hora_fin">Hora Fin (HH:MM):</label>
+        <input type="time" id="hora_fin" name="hora_fin" required><br><br>
+
+        <button type="submit" id="btnguardar">Guardar</button>
+        <button type="reset">Cancelar</button>
+    </form>
+    <script src="horarios_post.js"></script>
+</body>
+
+</html>

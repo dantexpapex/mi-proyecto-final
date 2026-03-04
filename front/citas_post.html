@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Registro de Cita</title>
+</head>
+
+<body>
+    <h1>REGISTRO DE CITA</h1>
+    <a href="index.html">Volver al inicio</a> | <a href="citas_get.html">Volver a la lista</a><br><br>
+
+    <form name="FormularioData">
+        <label for="id_paciente">ID Paciente:</label>
+        <input type="number" id="id_paciente" name="id_paciente" required><br><br>
+
+        <label for="id_medico">ID Médico:</label>
+        <input type="number" id="id_medico" name="id_medico" required><br><br>
+
+        <label for="fecha">Fecha:</label>
+        <input type="date" id="fecha" name="fecha" required><br><br>
+
+        <label for="hora">Hora (HH:MM):</label>
+        <input type="time" id="hora" name="hora" required><br><br>
+
+        <label for="estado">Estado:</label>
+        <select id="estado" name="estado" required>
+            <option value="Pendiente">Pendiente</option>
+            <option value="Completada">Completada</option>
+            <option value="Cancelada">Cancelada</option>
+        </select><br><br>
+
+        <label for="motivo">Motivo de la Cita (Opcional):</label><br>
+        <textarea id="motivo" name="motivo" rows="4" cols="50"></textarea><br><br>
+
+        <button type="submit" id="btnguardar">Guardar</button>
+        <button type="reset">Cancelar</button>
+    </form>
+    <script src="citas_post.js"></script>
+</body>
+
+</html>

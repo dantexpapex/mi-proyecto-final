@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Registro de Usuario</title>
+</head>
+
+<body>
+    <h1>REGISTRO DE USUARIO</h1>
+    <a href="index.html">Volver al inicio</a> | <a href="usuarios_get.html">Volver a la lista</a><br><br>
+
+    <form name="FormularioData">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br><br>
+
+        <label for="password_hash">Contraseña:</label>
+        <input type="password" id="password_hash" name="password_hash" required><br><br>
+
+        <label for="rol">Rol del Usuario:</label>
+        <select id="rol" name="rol" required>
+            <option value="Paciente">Paciente</option>
+            <option value="Medico">Médico</option>
+            <option value="Admin">Administrador</option>
+        </select><br><br>
+
+        <button type="submit" id="btnguardar">Guardar</button>
+        <button type="reset">Cancelar</button>
+    </form>
+    <script src="usuarios_post.js"></script>
+</body>
+
+</html>

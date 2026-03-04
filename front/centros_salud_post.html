@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Registro de Centro de Salud</title>
+</head>
+
+<body>
+    <h1>REGISTRO DE CENTRO DE SALUD</h1>
+    <a href="index.html">Volver al inicio</a> | <a href="centros_salud_get.html">Volver a la lista</a><br><br>
+
+    <form name="FormularioData">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required><br><br>
+
+        <label for="direccion">Dirección:</label>
+        <input type="text" id="direccion" name="direccion" required><br><br>
+
+        <label for="zona">Zona:</label>
+        <input type="text" id="zona" name="zona"><br><br>
+
+        <label for="telefono">Teléfono:</label>
+        <input type="text" id="telefono" name="telefono"><br><br>
+
+        <label for="latitud">Latitud:</label>
+        <input type="number" id="latitud" name="latitud" step="any"><br><br>
+
+        <label for="longitud">Longitud:</label>
+        <input type="number" id="longitud" name="longitud" step="any"><br><br>
+
+        <button type="submit" id="btnguardar">Guardar</button>
+        <button type="reset">Cancelar</button>
+    </form>
+    <script src="centros_salud_post.js"></script>
+</body>
+
+</html>
