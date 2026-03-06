@@ -81,13 +81,14 @@ async def actualizar_cita(id_cita: int, cita: Cita, conn = Depends(get_conexion)
         cita.motivo,
         id_cita
     )
+    print("Actualizando Citas")
     try:
         async with conn.cursor() as cursor:
             await cursor.execute(consulta, parametros)
             if cursor.rowcount == 0:
                 raise HTTPException(status_code=404, detail="Cita no encontrada")
             await conn.commit()
-            return {"mensaje": "Cita actualizada correctamente"}
+            return {"mensaje": "Actualizando citas"}
     except HTTPException:
         raise
     except Exception as e:
